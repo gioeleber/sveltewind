@@ -11,15 +11,11 @@
 
 import { defineConfig } from "vite";
 import { svelte } from "@sveltejs/vite-plugin-svelte";
-import liveReload from "vite-plugin-live-reload";
-import FullReload from "vite-plugin-full-reload";
+import viteWatchAdd from "./src/plugin/vite-watch-add.js";
 
 export default ({ command }) =>
   defineConfig({
-    plugins: [
-      svelte(),
-      // FullReload("/**/*.php")
-    ],
+    plugins: [svelte(), viteWatchAdd({ path: "**/*.php", extension: ".php" })],
     base: command === "serve" ? "" : "/build/",
     publicDir: "fake_dir_so_nothing_gets_copied",
 

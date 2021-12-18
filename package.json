@@ -1,7 +1,6 @@
 {
   "name": "svelte-tw",
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "start": "vite",
     "build": "vite build",
