@@ -1,0 +1,16 @@
+.content-wrapper {
+  @apply px-4;
+  @apply mx-auto;
+  @apply py-10;
+  @apply flex;
+  @apply gap-x-10;
+  @apply max-w-5xl;
+
+  .content {
+    @apply flex-1;
+  }
+
+  aside {
+    @apply flex-[0.3_0.3_0%];
+  }
+}

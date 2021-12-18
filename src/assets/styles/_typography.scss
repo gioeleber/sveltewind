@@ -1,0 +1,67 @@
+h1,
+.h1 {
+  @apply text-4xl;
+  @apply mb-5;
+  @apply font-semibold;
+}
+h2,
+.h2 {
+  @apply text-3xl;
+  @apply mb-4;
+  @apply font-semibold;
+}
+h3,
+.h3 {
+  @apply text-3xl;
+  @apply mb-4;
+  @apply font-semibold;
+}
+h4,
+.h4 {
+  @apply text-2xl;
+  @apply mb-3;
+  @apply font-semibold;
+}
+h5,
+.h5 {
+  @apply text-xl;
+  @apply mb-2;
+  @apply font-semibold;
+}
+h6,
+.h6 {
+  @apply text-lg;
+  @apply mb-2;
+  @apply font-semibold;
+}
+p,
+.p {
+  @apply text-base;
+  @apply mb-2;
+  @apply font-normal;
+}
+strong,
+b,
+.strong {
+  @apply font-bold;
+}
+i,
+em {
+  @apply italic;
+}
+label,
+.label {
+  @apply italic;
+  @apply text-primary;
+  @apply text-sm;
+}
+ul li {
+  @apply list-disc;
+}
+ol li {
+  @apply list-decimal;
+}
+a {
+  @apply underline;
+  @apply text-primary;
+}
