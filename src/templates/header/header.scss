@@ -1,17 +1,23 @@
 #main-menu {
-  @apply flex;
   @apply px-4;
   @apply py-3;
   @apply bg-white;
   @apply shadow-xl;
-  @apply items-center;
+  @apply relative;
 
   .menu {
-    @apply flex;
+    @apply md:flex;
   }
 
   .menu-item {
-    @apply px-3;
     @apply list-none;
+  }
+
+  #menu-desktop .menu-item {
+    @apply px-3;
+  }
+
+  #menu-mobile .menu-item {
+    @apply py-2;
   }
 }

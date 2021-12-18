@@ -8,7 +8,7 @@ export let content: Content[];
 <div class="content-wrapper">
   {#each content as article}
   <article class="content">
-    <h1 >{article.title}</h1>
+    <h1>{article.title}</h1>
     {@html article.content}
   </article>
   {/each}
