@@ -24,7 +24,14 @@ $content = serialize_data([
     ?></title>
     <?php wp_head(); ?>
   </head>
-<body>
-<div id="main-loader">Loading...</div>
-<header id="main-menu" data-content="<?= $content ?>">
-</header>
+<body <?php body_class(); ?> id="body">
+  <div id="main-loader" style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <?php if (has_custom_logo()): ?>
+      <img width="64" src="<?=  wp_get_attachment_image_src(get_theme_mod( 'custom_logo' ) , 'full')[0] ?>" alt="loading logo">
+    <?php else: ?>
+      <div>Loading...</div>
+    <?php endif; ?>
+  </div>
+
+  <header id="main-menu" data-content="<?= $content ?>">
+  </header>

@@ -1,7 +1,6 @@
 <script lang="ts">
 import type { Content } from "./page";
 
-
 export let content: Content[];
 </script>
 

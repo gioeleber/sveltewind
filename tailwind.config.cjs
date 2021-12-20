@@ -3,7 +3,10 @@ const config = {
 
   theme: {
     extend: {
-      colors: { primary: "#8c3e74" },
+      colors: {
+        primary: "#8c3e74",
+        primarydark: "#753562",
+      },
     },
   },
 

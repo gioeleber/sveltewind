@@ -14,3 +14,34 @@
     @apply flex-[0.3_0.3_0%];
   }
 }
+
+// generic button
+.btn,
+.wp-block-button a,
+.wp-block-search .wp-block-search__button {
+  @apply no-underline px-5 py-2 border-2 inline-block rounded shadow-lg active:shadow font-medium text-base cursor-pointer transition;
+}
+
+.btn-primary,
+.wp-block-button a,
+.wp-block-search .wp-block-search__button {
+  @apply bg-primary border-primary hover:bg-primarydark hover:border-primarydark text-white shadow-primary/50;
+}
+
+// generic input
+.input-text,
+.wp-block-search .wp-block-search__input {
+  @apply border-2 px-3 py-2 rounded border-gray-300;
+}
+
+// search form
+.searchform {
+  @apply flex gap-1;
+}
+
+// widget
+.widget-container {
+  li {
+    @apply list-none;
+  }
+}

@@ -1,0 +1,1 @@
+<time class="italic text-gray-400 block mb-3">Published on: <slot></slot></time>

@@ -1,12 +1,9 @@
+import type { Article } from "src/interfaces/global";
 import { desirializeData } from "../../utils/utils";
-
-export interface Article {
-  title: string;
-  content: string;
-}
 
 export interface Content {
   sidebar: string | null;
+  homeUrl: string;
   articles: Article[];
 }
 

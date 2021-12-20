@@ -1,6 +1,6 @@
 <script lang="ts">
-  import {fly} from "svelte/transition"
-  import {quintOut} from "svelte/easing"
+  import { fly } from "svelte/transition"
+  import { quintOut } from "svelte/easing"
 
   import type { Content } from "./header";
   import Hamburger from "./components/Hamburger.svelte";
