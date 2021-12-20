@@ -33,5 +33,5 @@ $content = serialize_data([
     <?php endif; ?>
   </div>
 
-  <header id="main-menu" data-content="<?= $content ?>">
+  <header id="main-menu" data-props="<?= $content ?>">
   </header>

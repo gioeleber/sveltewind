@@ -5,7 +5,6 @@
   import type { Content } from "./single";
 
   export let content: Content;
-  console.log(content.articles[0].categories)
 </script>
 
 <div class="content-wrapper">

@@ -1,15 +1,15 @@
 <script lang="ts">
-import type { Content } from ".";
+import type { ArchiveItem } from "../../interfaces/global";
 
-export let content: Content[];
+export let archiveItems: ArchiveItem[];
 </script>
 
 <div class="content-wrapper">
   <div class="content-list">
-    {#each content as article}
+    {#each archiveItems as item}
     <article class="content">
-      <h2><a href="{article.permalink}">{article.title}</a></h2>
-      {@html article.content}
+      <h2><a href="{item.permalink}">{item.title}</a></h2>
+      {@html item.content}
     </article>
     {/each}
   </div>

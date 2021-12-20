@@ -3,9 +3,9 @@ import Footer from "./Footer.svelte";
 import { desirializeData } from "../../utils/utils";
 import "./footer.scss";
 
-interface Content {
-  menu: string;
-}
+// interface Content {
+//   menu: string;
+// }
 
 let footer: null | Footer = null;
 const target = document.getElementById("main-footer");

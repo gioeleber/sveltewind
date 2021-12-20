@@ -1,14 +1,14 @@
 <script lang="ts">
-import type { Content } from "./page";
+import type { Post } from "../../interfaces/global";
 
-export let content: Content[];
+export let pages: Post[];
 </script>
 
 <div class="content-wrapper">
-  {#each content as article}
+  {#each pages as page}
   <article class="content">
-    <h1>{article.title}</h1>
-    {@html article.content}
+    <h1>{page.title}</h1>
+    {@html page.content}
   </article>
   {/each}
 </div>

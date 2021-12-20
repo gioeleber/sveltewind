@@ -23,5 +23,5 @@ $content = urlencode(json_encode([
 ?>
 
 <?php get_header(); ?>
-<main id="main-single" data-content="<?= $content ?>"></main>
+<main id="main-single" data-props="<?= $content ?>"></main>
 <?php get_footer(); ?>

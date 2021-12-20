@@ -1,3 +1,5 @@
 export const desirializeData = (data: DOMStringMap) => {
-  return JSON.parse(decodeURIComponent(data.content.replace(/\+/g, " ")));
+  return data.props
+    ? JSON.parse(decodeURIComponent(data.props?.replace(/\+/g, " ") ?? ""))
+    : console.error("Target does not have daset-props");
 };

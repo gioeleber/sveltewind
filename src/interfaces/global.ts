@@ -4,6 +4,10 @@ export interface Post {
   thumbUrl?: string;
 }
 
+export interface ArchiveItem extends Post {
+  permalink: string;
+}
+
 export interface Article extends Post {
   publishDate: string;
   categories: Category[];

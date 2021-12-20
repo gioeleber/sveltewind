@@ -1,5 +1,5 @@
 <?php 
-$content = urlencode(json_encode([
+$props = urlencode(json_encode([
   [
     "title" => get_the_title(),
     "content" => get_the_content()
@@ -8,5 +8,5 @@ $content = urlencode(json_encode([
 
 ?>
 <?php get_header(); ?>
-<main id="main-page" data-content="<?= $content ?>"></main>
+<main id="main-page" data-props="<?= $props ?>"></main>
 <?php get_footer(); ?>
