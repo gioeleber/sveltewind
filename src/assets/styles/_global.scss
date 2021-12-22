@@ -1,17 +1,12 @@
 .content-wrapper {
-  @apply px-4;
-  @apply mx-auto;
-  @apply py-10;
-  @apply flex;
-  @apply gap-x-10;
-  @apply max-w-5xl;
+  @apply px-4 mx-auto py-10 flex flex-col md:flex-row gap-8 max-w-5xl;
 
   .content {
     @apply flex-1;
   }
 
   aside {
-    @apply flex-[0.3_0.3_0%];
+    @apply flex-[0.5_0%] border-t-2 pt-3 md:border-t-0 md:pt-0 md:border-l-2 md:pl-3;
   }
 }
 

@@ -5,7 +5,8 @@ export interface Post {
 }
 
 export interface ArchiveItem extends Post {
-  permalink: string;
+  permalink: string | null;
+  publishDate: string;
 }
 
 export interface Article extends Post {

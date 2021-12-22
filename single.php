@@ -1,14 +1,8 @@
 <?php 
-$right_sidebar = null;
-if ( is_active_sidebar( 'Right Sidebar' ) ) :
-  ob_start();
-  dynamic_sidebar('right-sidebar');
-  $right_sidebar = ob_get_contents();
-  ob_end_clean();
-endif;
+
 
 $content = urlencode(json_encode([
-  "sidebar" => $right_sidebar,
+  "sidebar" => sw_sidebar_html("right-sidebar"),
   "homeUrl" => home_url( '/' ),
   "articles" => [
     [

@@ -1,9 +1,9 @@
 - [x] style button
 - [x] add search template
 - [x] style sidebar
-- [ ] add details to blog
-- [ ] add details to article
-- [ ] unify interfaces
+- [x] add details to article
+- [x] unify interfaces
+- [X] add details to blog, sistemare dattagli info articolo
 - [ ] add widgets to footer
 - [ ] add underscore functionalities
 - [ ] add front-page template

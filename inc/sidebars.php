@@ -14,3 +14,15 @@ function right_sidebar() {
 
   register_sidebar( $args );
 }
+
+function sw_sidebar_html($sidebar_name) {
+  $right_sidebar = null;
+  if ( is_active_sidebar( $sidebar_name ) ) :
+    ob_start();
+    dynamic_sidebar($sidebar_name);
+    $right_sidebar = ob_get_contents();
+    ob_end_clean();
+  endif;
+
+  return $right_sidebar;
+}
