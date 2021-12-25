@@ -9,6 +9,10 @@ export interface ArchiveItem extends Post {
   publishDate: string;
 }
 
+export interface ArchivePost extends ArchiveItem {
+  categories: string;
+}
+
 export interface Article extends Post {
   publishDate: string;
   categories: Category[];
