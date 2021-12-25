@@ -11,18 +11,22 @@ function right_sidebar() {
     'before_title'  => '<h3 class="h4">',
     'after_title'   => '</h3>' 
   );
-
+  
   register_sidebar( $args );
 }
 
-function sw_sidebar_html($sidebar_name) {
-  $right_sidebar = null;
-  if ( is_active_sidebar( $sidebar_name ) ) :
-    ob_start();
-    dynamic_sidebar($sidebar_name);
-    $right_sidebar = ob_get_contents();
-    ob_end_clean();
-  endif;
+add_action( 'widgets_init', 'footer_sidebar' );
+function footer_sidebar() {
+  $args = array(
+    'name'          => 'Footer',
+    'id'            => 'footer-sidebar',
+    'description'   => 'This is the widget footer area',
+    'class'         => 'wiget-container',
+    'before_widget' => '<li id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</li>',
+    'before_title'  => '<h3 class="h4">',
+    'after_title'   => '</h3>' 
+  );
 
-  return $right_sidebar;
+  register_sidebar( $args );
 }

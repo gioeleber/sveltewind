@@ -1,7 +1,7 @@
 <?php 
 
 
-$content = urlencode(json_encode([
+$content = sw_serialize_data([
   "sidebar" => sw_sidebar_html("right-sidebar"),
   "homeUrl" => home_url( '/' ),
   "articles" => [
@@ -13,7 +13,7 @@ $content = urlencode(json_encode([
       "categories" => array_values(get_categories()),
     ]
   ],
-]));
+]);
 ?>
 
 <?php get_header(); ?>

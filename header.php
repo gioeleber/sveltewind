@@ -1,7 +1,7 @@
 <?php
 $menu = wp_nav_menu(["echo" => false]);
 
-$content = serialize_data([
+$props = sw_serialize_data([
   "menu" => $menu,
   "logoSrc" => has_custom_logo()
     ? wp_get_attachment_image_src(get_theme_mod( 'custom_logo' ) , 'full')[0]
@@ -33,5 +33,5 @@ $content = serialize_data([
     <?php endif; ?>
   </div>
 
-  <header id="main-menu" data-props="<?= $content ?>">
+  <header id="main-menu" data-props="<?= $props ?>">
   </header>

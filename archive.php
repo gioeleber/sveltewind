@@ -1,7 +1,7 @@
 <?php 
 $props = [
   "sidebar" => sw_sidebar_html("right-sidebar"),
-  "homeUrl" => home_url( '/' ),
+  "homeUrl" => home_url('/'),
   "catName" => sw_get_catagory_name(),
   "archivePosts" => [] 
 ];
@@ -28,7 +28,7 @@ if ( have_posts() ) {
   ]);
 }
 
-$props = serialize_data($props);
+$props = sw_serialize_data($props);
 
 ?>
 <?php get_header(); ?>

@@ -26,7 +26,7 @@ if ( have_posts() ) {
   ]);
 }
 
-$props = serialize_data($props);
+$props = sw_serialize_data($props);
 
 ?>
 <?php get_header(); ?>

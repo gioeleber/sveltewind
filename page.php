@@ -1,10 +1,10 @@
 <?php 
-$props = urlencode(json_encode([
+$props = sw_serialize_data([
   [
     "title" => get_the_title(),
     "content" => get_the_content()
   ]
-]));
+]);
 
 ?>
 <?php get_header(); ?>
