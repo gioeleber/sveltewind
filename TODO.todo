@@ -5,13 +5,14 @@
 - [x] unify interfaces
 - [X] add details to blog, sistemare dattagli info articolo
 - [ ] add widgets to footer
+- [ ] pagination
 - [ ] add underscore functionalities
 - [ ] add other templates
-- [ ] pagination
+- [ ] add global store
 - [ ] add dark mode
 - [ ] add cache support
-- [ ] add global store
-- [ ] find a wai to make serch component work
+- [ ] find a way to make serch component work
 - [ ] add front-page template with custom content type
 - [ ] invent a non js version
+- [ ] elevate design
 

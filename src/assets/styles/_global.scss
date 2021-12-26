@@ -4,10 +4,6 @@
   .content {
     @apply flex-1;
   }
-
-  aside {
-    @apply flex-[0.5_0%] border-t-2 pt-3 md:border-t-0 md:pt-0 md:border-l-2 md:pl-3;
-  }
 }
 
 // generic button
@@ -36,7 +32,11 @@
 
 // widget
 .widget-container {
-  li {
+  li.widget {
     @apply list-none;
+  }
+
+  &.widget-horizontal .widget {
+    @apply max-w-[33.3%];
   }
 }

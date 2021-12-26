@@ -1,4 +1,6 @@
 <script lang="ts">
+import Sidebar from "../../commons/Sidebar.svelte";
+
 import Thumbnail from "../../commons/Thumbnail.svelte";
 import Time from "../../commons/Time.svelte";
 
@@ -23,7 +25,7 @@ export let content: Content;
     </article>
     {/each}
   </div>
-  <aside class="widget-container">
-    {@html content.sidebar}
-  </aside>
+  {#if content.sidebar}
+    <Sidebar html={content.sidebar} direction="v" />
+  {/if}
 </div>

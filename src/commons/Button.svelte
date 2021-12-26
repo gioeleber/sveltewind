@@ -1,11 +1,10 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
-  import "./button.scss"
-
+  
   type ButtonTypes = "primary"
-
-  export const href: string | null = null
-  export const type: ButtonTypes = "primary"
+  
+  export let href: string | null = null
+  export let type: ButtonTypes = "primary"
 
 	const dispatch = createEventDispatcher();
 

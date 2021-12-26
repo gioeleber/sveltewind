@@ -65,3 +65,7 @@ a {
   @apply underline;
   @apply text-primary;
 }
+ul,
+.wp-block-latest-posts.wp-block-latest-posts__list {
+  @apply pl-5;
+}

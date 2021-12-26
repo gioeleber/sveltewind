@@ -17,7 +17,7 @@ if (target) {
   const content: Content = desirializeData(target.dataset);
 
   // remove data attribute
-  target.removeAttribute("data-content");
+  target.removeAttribute("data-props");
 
   header = new Header({
     target,
