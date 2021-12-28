@@ -37,6 +37,6 @@
   }
 
   &.widget-horizontal .widget {
-    @apply max-w-[33.3%];
+    @apply md:max-w-[33.3%];
   }
 }

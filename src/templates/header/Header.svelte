@@ -3,8 +3,9 @@
   import { quintOut } from "svelte/easing"
 
   import type { Content } from "./header";
-  import Hamburger from "./components/Hamburger.svelte";
-  import Close from "./components/Close.svelte";
+  import Hamburger from "../../icons//Hamburger.svelte";
+  import Close from "../../icons/Close.svelte";
+import ThemeSwitch from "../../widgets/ThemeSwitch.svelte";
 
   export let content: Content;
   let isMenuOpen = false;
@@ -22,7 +23,7 @@
     <h5 class="mb-0">{content.siteName}</h5>
     {/if}
   </a>
-  <div id="menu-desktop" class="hidden md:flex">
+  <div id="menu-desktop" class="hidden md:flex mr-auto">
     {@html content.menu}
   </div>
   
@@ -36,6 +37,8 @@
       {@html content.menu}
     </div>
   {/if}
+
+  <ThemeSwitch />
 
   <button class="md:hidden" on:click={toggleMenu}>
     <Hamburger />

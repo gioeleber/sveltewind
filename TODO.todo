@@ -4,11 +4,11 @@
 - [x] add details to article
 - [x] unify interfaces
 - [X] add details to blog, sistemare dattagli info articolo
-- [ ] add widgets to footer
+- [x] add widgets to footer
+- [x] add global store
 - [ ] pagination
 - [ ] add underscore functionalities
 - [ ] add other templates
-- [ ] add global store
 - [ ] add dark mode
 - [ ] add cache support
 - [ ] find a way to make serch component work
