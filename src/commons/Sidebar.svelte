@@ -7,6 +7,6 @@
     "widget-horizontal md:flex-row flex-1"
 </script>
 
-<aside class={`widget-container flex flex-col gap-8 ${addClass}`}>
+<aside class={`widget-container flex flex-col gap-8 dark:border-neutral-800 ${addClass}`}>
   {@html html}
 </aside>

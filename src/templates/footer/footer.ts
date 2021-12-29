@@ -1,7 +1,6 @@
 import Footer from "./Footer.svelte";
 
 import { desirializeData } from "../../utils/utils";
-import "./footer.scss";
 
 export interface Content {
   sidebar: string;

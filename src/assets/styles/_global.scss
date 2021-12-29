@@ -1,3 +1,7 @@
+body {
+  @apply bg-white dark:bg-neutral-900;
+}
+
 .content-wrapper {
   @apply px-4 mx-auto py-10 flex flex-col md:flex-row gap-8 max-w-5xl;
 
@@ -22,7 +26,7 @@
 // generic input
 .input-text,
 .wp-block-search .wp-block-search__input {
-  @apply border-2 px-3 py-2 rounded border-gray-300;
+  @apply border-2 px-3 py-2 rounded border-neutral-300 dark:border-neutral-700 dark:bg-neutral-800;
 }
 
 // search form
@@ -39,4 +43,9 @@
   &.widget-horizontal .widget {
     @apply md:max-w-[33.3%];
   }
+}
+
+// footer
+#main-footer {
+  @apply bg-neutral-100 dark:bg-neutral-800;
 }

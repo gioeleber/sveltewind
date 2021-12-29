@@ -2,11 +2,21 @@
   import Moon from "../icons/Moon.svelte";
   import Sun from "../icons/Sun.svelte";
   
-import { isDarkMode } from "../stores/persistentStore";
+  import { theme } from "../stores/persistentStore";
+
+  const switchTheme = () => {
+    if ($theme === "light") {
+      theme.set("dark")
+      document.documentElement.classList.add('dark')
+      return
+    }
+    theme.set("light")
+    document.documentElement.classList.remove('dark')
+  }
 </script>
 
-<button on:click={() => isDarkMode.set($isDarkMode === "light" ? "dark" : "light")}>
-  {#if $isDarkMode === "light"}
+<button on:click={switchTheme}>
+  {#if $theme === "light"}
   <Moon />
   {:else}
   <Sun />

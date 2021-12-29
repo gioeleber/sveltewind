@@ -6,10 +6,10 @@
 - [X] add details to blog, sistemare dattagli info articolo
 - [x] add widgets to footer
 - [x] add global store
+- [x] add dark mode
 - [ ] pagination
 - [ ] add underscore functionalities
 - [ ] add other templates
-- [ ] add dark mode
 - [ ] add cache support
 - [ ] find a way to make serch component work
 - [ ] add front-page template with custom content type

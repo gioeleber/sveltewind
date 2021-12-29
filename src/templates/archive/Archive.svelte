@@ -13,7 +13,7 @@ export let content: Content;
   <div class="content-list">
     <h1>Categoria: {content.catName}</h1>
     {#each content.archivePosts as item}
-    <article class="content mb-5 pb-5 border-b-2 last:mb-0 last:pb-0 last:border-b-0">
+    <article class="content mb-5 pb-5 border-b-2 last:mb-0 last:pb-0 last:border-b-0 dark:border-neutral-800">
       <h2><a href={item.permalink}>{item.title}</a></h2>
       <Time>{item.publishDate}</Time>
       {#if item.thumbUrl}

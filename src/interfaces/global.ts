@@ -1,3 +1,5 @@
+export type Themes = "dark" | "light";
+
 export interface Post {
   title: string;
   content: string;

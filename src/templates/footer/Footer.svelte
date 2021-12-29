@@ -11,6 +11,6 @@ export let content: Content;
     <Sidebar html={content.sidebar} direction="h" />
   </div>
 {/if}
-<div id="main-footer-bottom" class="p-4 bg-gray-200">
+<div id="main-footer-bottom" class="p-4 bg-neutral-200 dark:bg-neutral-700">
   Proudly created with SvelteWind
 </div>

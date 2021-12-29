@@ -1,9 +1,5 @@
 #main-menu {
-  @apply px-4;
-  @apply py-3;
-  @apply bg-white;
-  @apply shadow-xl;
-  @apply relative;
+  @apply px-4 py-3 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-white/5 relative;
 
   .menu {
     @apply md:flex;
