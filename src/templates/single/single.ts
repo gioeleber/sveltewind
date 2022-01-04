@@ -1,4 +1,4 @@
-import type { Article } from "src/interfaces/global";
+import type { Article } from "../../interfaces/global";
 import { desirializeData } from "../../utils/utils";
 
 export interface Content {

@@ -6,7 +6,6 @@ $props = [
 ];
 
 if ( have_posts() ) {
-  // Start the Loop.
   while ( have_posts() ) {
     the_post();
 
@@ -20,7 +19,7 @@ if ( have_posts() ) {
   }
 } else {
   array_push($props["archiveItems"], [
-    "title" => "No props found",
+    "title" => "No content found",
     "content" => "There is no content in this page.",
     "permalink" => null
   ]);

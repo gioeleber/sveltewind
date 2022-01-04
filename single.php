@@ -1,7 +1,5 @@
 <?php 
-
-
-$content = sw_serialize_data([
+$props = sw_serialize_data([
   "sidebar" => sw_sidebar_html("right-sidebar"),
   "homeUrl" => home_url( '/' ),
   "articles" => [
@@ -17,5 +15,5 @@ $content = sw_serialize_data([
 ?>
 
 <?php get_header(); ?>
-<main id="main-single" data-props="<?= $content ?>"></main>
+<main id="main-single" data-props="<?= $props ?>"></main>
 <?php get_footer(); ?>

@@ -3,9 +3,9 @@
   import { quintOut } from "svelte/easing"
 
   import type { Content } from "./header";
-  import Hamburger from "../../icons//Hamburger.svelte";
-  import Close from "../../icons/Close.svelte";
-  import ThemeSwitch from "../../widgets/ThemeSwitch.svelte";
+  import Hamburger from "/src/icons/Hamburger.svelte";
+  import Close from "/src/icons/Close.svelte";
+  import ThemeSwitch from "./components/ThemeSwitch.svelte";
 
   export let content: Content;
   let isMenuOpen = false;

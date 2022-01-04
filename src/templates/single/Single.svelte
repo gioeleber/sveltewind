@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Sidebar from "../../commons/Sidebar.svelte";
-  import Category from "../../commons/Category.svelte";
-  import Thumbnail from "../../commons/Thumbnail.svelte";
-  import Time from "../../commons/Time.svelte";
+  import Sidebar from "/src/commons/Sidebar.svelte";
+  import Category from "/src/commons/Category.svelte";
+  import Thumbnail from "/src/commons/Thumbnail.svelte";
+  import Time from "/src/commons/Time.svelte";
   import type { Content } from "./single";
 
   export let content: Content;
