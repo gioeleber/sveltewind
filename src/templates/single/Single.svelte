@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Sidebar from "/src/commons/Sidebar.svelte";
+  import Sidebar from "/src/widgets/Sidebar.svelte";
   import Category from "/src/commons/Category.svelte";
   import Thumbnail from "/src/commons/Thumbnail.svelte";
   import Time from "/src/commons/Time.svelte";

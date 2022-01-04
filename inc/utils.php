@@ -19,3 +19,11 @@ function sw_sidebar_html($sidebar_name) {
 
   return $right_sidebar;
 }
+
+function sw_title() {
+  echo get_bloginfo( 'name' ) . (
+    is_front_page() || is_home()
+      ? ""
+      : " - " . get_the_title()
+  );
+}
