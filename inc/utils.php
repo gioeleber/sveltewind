@@ -27,3 +27,9 @@ function sw_title() {
       : " - " . get_the_title()
   );
 }
+
+function sw_logo() {
+  return has_custom_logo()
+    ? wp_get_attachment_image_src(get_theme_mod( 'custom_logo' ) , 'full')[0]
+    : null;
+}

@@ -1,5 +1,29 @@
+// Layout
 export type Themes = "dark" | "light";
 
+export interface DefaultContent {
+  layout: Layout;
+}
+
+export interface Layout {
+  templateName: string;
+  header: Header;
+  sidebar: string;
+  footer: Footer;
+}
+
+export interface Header {
+  menu: string;
+  logoSrc: string;
+  siteName: string;
+  homeUrl: string;
+}
+
+export interface Footer {
+  footerSidebar: string;
+}
+
+// Posts
 export interface Post {
   title: string;
   content: string;

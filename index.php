@@ -1,15 +1,26 @@
 <?php 
 $props = [
-  "sidebar" => sw_sidebar_html("right-sidebar"),
-  "homeUrl" => home_url( '/' ),
-  "archiveItems" => [] 
+  "layout" => [
+    "templateName" => "Index",
+    "header" => [
+      "menu" => wp_nav_menu(["echo" => false]),
+      "logoSrc" => sw_logo(),
+      "siteName" => get_bloginfo( 'name' ),
+      "homeUrl" => home_url( '/' ),
+    ],
+    "sidebar" => sw_sidebar_html("right-sidebar"),
+    "footer" => [
+      "footerSidebar" => sw_sidebar_html("footer-sidebar"),
+    ],
+  ],
+  "posts" => [] 
 ];
 
 if ( have_posts() ) {
   while ( have_posts() ) {
     the_post();
 
-    array_push($props["archiveItems"], [
+    array_push($props["posts"], [
       "title" => get_the_title(),
       "content" => get_the_excerpt(),
       "permalink" => get_the_permalink(),
@@ -18,7 +29,7 @@ if ( have_posts() ) {
     ]);
   }
 } else {
-  array_push($props["archiveItems"], [
+  array_push($props["posts"], [
     "title" => "No content found",
     "content" => "There is no content in this page.",
     "permalink" => null
@@ -26,8 +37,8 @@ if ( have_posts() ) {
 }
 
 $props = sw_serialize_data($props);
-
 ?>
+
 <?php get_header(); ?>
-<main id="main-index" data-props='<?= $props ?>'></main>
+<div id="app" data-props="<?= $props ?>"></div>
 <?php get_footer(); ?>

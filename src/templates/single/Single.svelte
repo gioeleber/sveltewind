@@ -1,26 +1,27 @@
 <script lang="ts">
-  import Sidebar from "/src/widgets/Sidebar.svelte";
   import Category from "/src/commons/Category.svelte";
   import Thumbnail from "/src/commons/Thumbnail.svelte";
   import Time from "/src/commons/Time.svelte";
-  import type { Content } from "./single";
+  import type { Article, DefaultContent } from "../../interfaces/global";
+  import Layout from "/src/widgets/Layout.svelte";
+
+  interface Content extends DefaultContent {
+    posts: Article[];
+  }
 
   export let content: Content;
 </script>
 
-<div class="content-wrapper">
-  {#each content.articles as article}
-  <article class="content">
-    <h1>{article.title}</h1>
-    <Time>{article.publishDate}</Time>
-    <Category homeUrl={content.homeUrl} categories={article.categories} />
-    {#if article.thumbUrl}
-      <Thumbnail src={article.thumbUrl}/>
-    {/if}
-    {@html article.content}
-  </article>
+<Layout contentLayout={content.layout}>
+  {#each content.posts as article}
+    <article class="content">
+      <h1>{article.title}</h1>
+      <Time>{article.publishDate}</Time>
+      <Category homeUrl={content.layout.header.homeUrl} categories={article.categories} />
+      {#if article.thumbUrl}
+        <Thumbnail src={article.thumbUrl}/>
+      {/if}
+      {@html article.content}
+    </article>
   {/each}
-  {#if content.sidebar}
-    <Sidebar html={content.sidebar} direction="v" />
-  {/if}
-</div>
+</Layout>

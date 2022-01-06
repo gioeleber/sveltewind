@@ -1,31 +1,29 @@
 <script lang="ts">
-import Sidebar from "/src/widgets/Sidebar.svelte";
-
 import Thumbnail from "../../commons/Thumbnail.svelte";
 import Time from "../../commons/Time.svelte";
+import Layout from "/src/widgets/Layout.svelte";
+import type { DefaultContent, ArchiveItem } from "../../interfaces/global";
 
-import type { Content } from "./archive";
+interface Content extends DefaultContent {
+  catName: string;
+  posts: ArchiveItem[];
+}
 
 export let content: Content;
 </script>
 
-<div class="content-wrapper">
-  <div class="content-list">
-    <h1>Categoria: {content.catName}</h1>
-    {#each content.archivePosts as item}
-    <article class="content mb-5 pb-5 border-b-2 last:mb-0 last:pb-0 last:border-b-0 dark:border-neutral-800">
-      <h2><a href={item.permalink}>{item.title}</a></h2>
-      <Time>{item.publishDate}</Time>
-      {#if item.thumbUrl}
-      <a href={item.permalink}>
-        <Thumbnail src={item.thumbUrl}/>
-      </a>
-      {/if}
-      {@html item.content}
-    </article>
-    {/each}
-  </div>
-  {#if content.sidebar}
-    <Sidebar html={content.sidebar} direction="v" />
-  {/if}
-</div>
+<Layout contentLayout={content.layout}>
+  <h1>Categoria: {content.catName}</h1>
+  {#each content.posts as item}
+  <article class="content mb-5 pb-5 border-b-2 last:mb-0 last:pb-0 last:border-b-0 dark:border-neutral-800">
+    <h2><a href={item.permalink}>{item.title}</a></h2>
+    <Time>{item.publishDate}</Time>
+    {#if item.thumbUrl}
+    <a href={item.permalink}>
+      <Thumbnail src={item.thumbUrl}/>
+    </a>
+    {/if}
+    {@html item.content}
+  </article>
+  {/each}
+</Layout>

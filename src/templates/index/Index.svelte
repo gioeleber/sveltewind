@@ -1,16 +1,18 @@
 <script lang="ts">
-import Sidebar from "/src/widgets/Sidebar.svelte";
-import Thumbnail from "../../commons/Thumbnail.svelte";
-import Time from "../../commons/Time.svelte";
+import Thumbnail from "/src/commons/Thumbnail.svelte";
+import Time from "/src/commons/Time.svelte";
+import Layout from "/src/widgets/Layout.svelte";
+import type { DefaultContent, ArchiveItem } from "../../interfaces/global";
 
-import type { Content } from "./index";
+interface Content extends DefaultContent {
+  posts: ArchiveItem[];
+}
 
 export let content: Content;
 </script>
 
-<div class="content-wrapper">
-  <div class="content-list">
-    {#each content.archiveItems as item}
+<Layout contentLayout={content.layout}>
+  {#each content.posts as item}
     <article class="content mb-5 pb-5 border-b-2 last:mb-0 last:pb-0 last:border-b-0 dark:border-neutral-800">
       <h2><a href={item.permalink}>{item.title}</a></h2>
       <Time>{item.publishDate}</Time>
@@ -21,9 +23,5 @@ export let content: Content;
       {/if}
       {@html item.content}
     </article>
-    {/each}
-  </div>
-  {#if content.sidebar} 
-    <Sidebar html={content.sidebar} direction="v" />
-  {/if}
-</div>
+  {/each}
+</Layout>

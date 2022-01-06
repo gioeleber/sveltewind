@@ -1,8 +1,19 @@
 <?php 
 $props = sw_serialize_data([
-  "sidebar" => sw_sidebar_html("right-sidebar"),
-  "homeUrl" => home_url( '/' ),
-  "articles" => [
+  "layout" => [
+    "templateName" => "Single",
+    "header" => [
+      "menu" => wp_nav_menu(["echo" => false]),
+      "logoSrc" => sw_logo(),
+      "siteName" => get_bloginfo( 'name' ),
+      "homeUrl" => home_url( '/' ),
+    ],
+    "sidebar" => sw_sidebar_html("right-sidebar"),
+    "footer" => [
+      "footerSidebar" => sw_sidebar_html("footer-sidebar"),
+    ],
+  ],
+  "posts" => [
     [
       "title"=> get_the_title(),
       "content" => get_the_content(),
@@ -15,5 +26,5 @@ $props = sw_serialize_data([
 ?>
 
 <?php get_header(); ?>
-<main id="main-single" data-props="<?= $props ?>"></main>
+<div id="app" data-props="<?= $props ?>"></div>
 <?php get_footer(); ?>

@@ -1,14 +1,22 @@
 <script lang="ts">
-import type { Post } from "../../interfaces/global";
+  import type { Post } from "../../interfaces/global";
+  import type { DefaultContent } from "../../interfaces/global";
+  import Layout from "/src/widgets/Layout.svelte";
 
-export let pages: Post[];
+  interface Content extends DefaultContent {
+    posts: Post[]
+  }
+
+  export let content: Content;
 </script>
 
-<div class="content-wrapper">
-  {#each pages as page}
-  <article class="content">
-    <h1>{page.title}</h1>
-    {@html page.content}
-  </article>
-  {/each}
-</div>
+<Layout contentLayout={content.layout}>
+  <div class="content-list">
+    {#each content.posts as page}
+      <article class="content">
+        <h1>{page.title}</h1>
+        {@html page.content}
+      </article>
+    {/each}
+  </div>
+</Layout>
