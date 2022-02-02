@@ -1,28 +1,31 @@
 // styles
 import "/src/assets/styles/main.scss";
 import { desirializeData } from "./utils/utils";
+import Page from "./templates/page/Page.svelte";
 
 const target = document.getElementById("app");
 
 if (target) {
   const content = desirializeData(target.dataset);
+  let Template;
 
-  import(
-    `./templates/${content.layout.templateName.toLowerCase()}/${
-      content.layout.templateName
-    }.svelte`
-  )
-    .then((module) => module.default)
-    .then((Page) => {
-      // remove data attribute
-      target.removeAttribute("data-props");
+  switch (content.layout.templateName) {
+    case "page":
+      Template = Page;
+      break;
 
-      new Page({
-        target,
-        props: { content },
-      });
-    })
-    .catch((err) => console.error(err));
+    default:
+      break;
+  }
+
+  // remove data attribute
+  target.removeAttribute("data-props");
+
+  if (Template)
+    new Template({
+      target,
+      props: { content },
+    });
 }
 
 const loader = document.getElementById("main-loader");
