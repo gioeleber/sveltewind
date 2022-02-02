@@ -1,7 +1,7 @@
 <?php
 $props = sw_serialize_data([
   "layout" => [
-    "templateName" => "page",
+    "templateName" => "Page",
     "header" => [
       "menu" => wp_nav_menu(["echo" => false]),
       "logoSrc" => sw_logo(),
