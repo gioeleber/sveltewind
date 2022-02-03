@@ -4,7 +4,7 @@ function dev_add_theme_scripts() {
 	$env = wp_get_environment_type();
 	$MAIN_SRC = "src/main.ts";
 
-	if ($env !== "local") {
+	if ($env === "local") {
 		wp_enqueue_script(
 			'main_module',
 			'http://localhost:3000/' . $MAIN_SRC,
