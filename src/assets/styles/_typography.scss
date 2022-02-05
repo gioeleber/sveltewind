@@ -1,67 +1,13 @@
 body {
-  @apply dark:text-neutral-100 text-neutral-900;
-}
-h1,
-.h1 {
-  @apply text-4xl mb-5 font-semibold;
-}
-h2,
-.h2 {
-  @apply text-3xl mb-4 font-semibold;
-}
-h3,
-.h3 {
-  @apply text-3xl mb-4 font-semibold;
-}
-h4,
-.h4 {
-  @apply text-2xl mb-3 font-semibold;
-}
-h5,
-.h5 {
-  @apply text-xl mb-2 font-semibold;
-}
-h6,
-.h6 {
-  @apply text-lg mb-2 font-semibold;
-}
-p,
-span .p {
-  @apply text-base font-normal;
-}
-p .p {
-  @apply mb-2;
-}
-small,
-.small {
-  @apply text-sm;
-}
-strong,
-b,
-.strong {
-  @apply font-bold;
-}
-i,
-em {
-  @apply italic;
+  @apply prose md:prose-lg lg:prose-xl dark:prose-invert max-w-none;
 }
 label,
 .label {
-  @apply italic;
-  @apply text-primary;
-  @apply text-sm;
-}
-ul li {
-  @apply list-disc;
-}
-ol li {
-  @apply list-decimal;
+  @apply italic text-primary text-sm;
 }
 a {
-  @apply underline;
-  @apply text-primary;
+  @apply underline text-primary;
 }
-ul,
 .wp-block-latest-posts.wp-block-latest-posts__list {
   @apply pl-5;
 }

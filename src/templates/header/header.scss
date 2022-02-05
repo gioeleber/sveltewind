@@ -1,12 +1,12 @@
 #main-menu {
   @apply px-4 py-3 bg-white dark:bg-neutral-900 shadow-xl dark:shadow-white/5 relative;
 
-  .menu {
-    @apply md:flex;
+  .menu ul {
+    @apply md:flex gap-x-6;
   }
 
   ul li {
-    @apply list-none;
+    @apply list-none pl-0;
   }
 
   #menu-desktop .menu-item {

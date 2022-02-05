@@ -20,9 +20,9 @@
   <div id="menu-wrapper" class={`flex items-center justify-between md:justify-start ${isMenuOpen? "isOpen": "isClosed"}`}> 
     <a href={content.homeUrl}>
       {#if content.logoSrc}
-      <img src={content.logoSrc} alt="logo" class="w-10 mr-3" id="logo">
+        <img src={content.logoSrc} alt="logo" class="w-10 mr-3" id="logo">
       {:else}
-      <h5 class="mb-0">{content.siteName}</h5>
+        <h5 class="mb-0">{content.siteName}</h5>
       {/if}
     </a>
     <div id="menu-desktop" class="hidden md:flex mr-auto">

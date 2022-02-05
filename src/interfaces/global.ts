@@ -50,3 +50,9 @@ export interface Category {
   slug: string;
   taxonomy: string;
 }
+
+export interface Social {
+  title: string;
+  link: string;
+  thumbUrl: string;
+}
